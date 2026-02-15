@@ -1,0 +1,32 @@
+{
+  "name": "@shivamsinghchahar/rails-skills",
+  "version": "1.0.0",
+  "description": "Comprehensive Rails agent skills for building professional applications with AI agents. Includes 12+ skills covering Active Record, controllers, testing, security, DevOps, and more.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivamsinghchahar/rails-skills.git"
+  },
+  "keywords": [
+    "agent-skills",
+    "rails",
+    "claude",
+    "agents",
+    "ai",
+    "skill",
+    "active-record",
+    "testing",
+    "rspec",
+    "security",
+    "docker",
+    "devops"
+  ],
+  "files": [
+    "skills/"
+  ],
+  "author": "Shivam Chahar",
+  "homepage": "https://github.com/shivamsinghchahar/rails-skills",
+  "bugs": {
+    "url": "https://github.com/shivamsinghchahar/rails-skills/issues"
+  }
+}
