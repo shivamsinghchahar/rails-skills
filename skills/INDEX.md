@@ -5,7 +5,7 @@ description: Master index of all Rails agent skills covering controllers, testin
 
 # Rails Agent Skills - Complete Index
 
-**8 comprehensive skills** for building professional Rails applications with Anthropic Claude agents.
+**9 comprehensive skills** for building professional Rails applications.
 
 ## Skills Overview
 
@@ -48,6 +48,12 @@ description: Master index of all Rails agent skills covering controllers, testin
 |-------|-------|-------|
 | **rails-security-audits** | 6 | Brakeman, bundler-audit, CSP, vulnerability scanning |
 
+### Code Review (1 skill)
+
+| Skill | Files | Focus |
+|-------|-------|-------|
+| **code-review** | 6 | Universal review with auto-detection for Rails, React, extensible for other stacks |
+
 ---
 
 ## Skill Descriptions for Agent Discovery
@@ -78,6 +84,9 @@ Build background jobs with Active Job including job definition, scheduling, retr
 
 ### rails-security-audits
 Audit Rails applications for security vulnerabilities using Brakeman, Bundler Audit, and security best practices. Use when scanning for CVEs, setting up security checks, or implementing security headers.
+
+### code-review
+Perform comprehensive code reviews for any stack with automatic stack detection and severity-classified findings. Use when reviewing pull requests, analyzing code changes, performing security audits, or evaluating code quality. Supports Rails (Ruby), React (TypeScript/JavaScript), and is extensible for other stacks. Triggers on phrases like "review this PR", "code review", "review these changes", "analyze this code", or when explicitly requesting review of specific files or git diffs.
 
 ### skill-creator
 Create and package custom agent skills with proper structure, metadata, and documentation. Use when designing new skills, following skill development best practices, or extending the agent skill ecosystem.
@@ -193,6 +202,15 @@ skills/
 │   ├── examples.md                (real-world security implementations)
 │   └── scripts/
 │
+├── code-review/
+│   ├── SKILL.md                   (entry point, detection, workflow)
+│   └── references/
+│       ├── severity-levels.md     (P0-P3 definitions)
+│       ├── general-review.md      (universal principles)
+│       ├── rails-review.md        (Rails-specific patterns)
+│       ├── react-review.md        (React-specific patterns)
+│       └── review-checklist.md    (master checklist)
+│
 └── skill-creator/
     ├── SKILL.md                   (metadata + quick start)
     ├── LICENSE.txt                (MIT license template)
@@ -202,7 +220,7 @@ skills/
 
 ---
 
-## How Claude Agents Use These Skills
+## How AI Agents Use These Skills
 
 **Automatic discovery**: Agent loads SKILL.md metadata. Only reads full content when triggered by:
 - Explicit user requests ("Create a migration...", "Write tests...")
@@ -237,8 +255,8 @@ rails-action-controller ┬─→ rails-testing-rspec (test controllers)
 
 ## Next Steps
 
-1. **Use with Claude**: Upload `skills/` folder to Claude Code or API
-2. **Test discovery**: Ask Claude to "create a User model" → triggers rails-active-record
+1. **Use with AI agents**: Upload `skills/` folder to your AI agent
+2. **Test discovery**: Ask the agent to "create a User model" → triggers rails-active-record
 3. **Compose skills**: "Test the migration and model" → uses multiple skills together
 4. **Customize**: Edit SKILL.md descriptions for your specific project patterns
 5. **Extend**: Add custom .md files for team-specific practices (coding standards, deployment process, etc.)
@@ -253,5 +271,4 @@ rails-action-controller ┬─→ rails-testing-rspec (test controllers)
 ✅ **Consistent naming** (gerund form: rails-{domain}-{feature})  
 ✅ **Clear trigger conditions** (what to use each skill for)  
 ✅ **Real-world examples** (production patterns, not academic)  
-✅ **No time-sensitive content** (valid from 2024 onward)  
-✅ **Tested with models** (Haiku, Sonnet, Opus compatible)
+✅ **No time-sensitive content** (valid from 2024 onward)

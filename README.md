@@ -1,6 +1,6 @@
 # Rails Agent Skills
 
-Professional-grade agent skills for building Rails applications with Claude and other AI agents.
+Professional-grade agent skills for building Rails applications.
 
 **10 comprehensive skills** covering the entire Rails stack, plus a skill creation guide: models, controllers, testing, security, database optimization, background jobs, and skill development.
 
@@ -60,6 +60,12 @@ npx skills add @yourusername/rails-skills
 |-------|----------|
 | **rails-security-audits** | Security scanning, vulnerability checks, security headers |
 
+### Code Review (1 skill)
+
+| Skill | Use When |
+|-------|----------|
+| **code-review** | Reviewing PRs, analyzing code changes, code quality evaluation |
+
 ## Usage Examples
 
 ### Create a User Model with Validations
@@ -67,7 +73,7 @@ npx skills add @yourusername/rails-skills
 ```
 User: "Create a User model with email validation and password hashing"
 
-Claude uses: rails-active-record
+Agent uses: rails-active-record
 ```
 
 ### Write Tests for a Controller
@@ -75,7 +81,7 @@ Claude uses: rails-active-record
 ```
 User: "Write RSpec tests for the PostsController"
 
-Claude uses: rails-testing-rspec
+Agent uses: rails-testing-rspec
 ```
 
 ### Optimize a Slow Query
@@ -83,19 +89,19 @@ Claude uses: rails-testing-rspec
 ```
 User: "Optimize this N+1 query in the posts controller"
 
-Claude uses: rails-postgres
+Agent uses: rails-postgres
 ```
 
 ## Supported Agents
 
-Skills work with any Agent Skills-compatible tool:
+Skills work with any Agent Skills-compatible tool including:
 
-- [Claude Code](https://claude.ai/code)
-- [Claude Desktop](https://claude.com/desktop)
-- [Vercel's Mux Coder](https://mux.coder.com/)
-- [Cursor IDE](https://cursor.com/)
-- [OpenCode](https://opencode.ai/)
-- And others...
+- Claude Code
+- Cursor IDE
+- OpenCode
+- Vercel v0
+- GitHub Copilot
+- And any other Agent Skills-compatible agent
 
 See [agentskills.io](https://agentskills.io) for the full list.
 
@@ -117,6 +123,7 @@ rails-skills/
     ├── rails-postgres/
     ├── rails-testing-rspec/
     ├── rails-security-audits/
+    ├── code-review/
     └── skill-creator/
 ```
 
@@ -134,7 +141,7 @@ Contributions are welcome! Please:
 2. Add real-world examples to examples.md
 3. Keep reference files focused and under 300 lines
 4. Validate with `skills-ref validate ./skills/skill-name`
-5. Test with Claude agents before submitting PR
+5. Test with AI agents before submitting PR
 
 ## License
 
@@ -146,7 +153,6 @@ MIT License - See LICENSE file for details
 - [What are Agent Skills](https://agentskills.io/what-are-skills)
 - [Agent Skills Registry](https://agentskills.io)
 - [Vercel Agent Skills Examples](https://github.com/vercel-labs/agent-skills)
-- [Anthropic Skills](https://github.com/anthropics/skills)
 
 ## About
 
